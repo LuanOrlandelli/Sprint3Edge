@@ -57,7 +57,7 @@ No futuro, o projeto será expandido para integrar dados de telemetria relaciona
    ```bash
    sudo apt update
    sudo apt install mosquitto mosquitto-clients´´´
-   1. Iniciar o serviço:
+1. ***Iniciar o serviço***:
    ```sudo systemctl start mosquitto
    sudo systemctl enable mosquitto
 3. **Configurar o Broker**:
