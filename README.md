@@ -62,7 +62,8 @@ No futuro, o projeto será expandido para integrar dados de telemetria relaciona
    sudo systemctl enable mosquitto
 3. **Configurar o Broker**:
    -Utilize o comando a seguir para verificar se o broker está funcionando:
-   ```mosquitto_sub -h localhost -t "test"
+   ```bash
+   mosquitto_sub -h localhost -t "test"
 
 ### 2. Configuração do ESP32
 
@@ -71,18 +72,18 @@ No futuro, o projeto será expandido para integrar dados de telemetria relaciona
    -Vá para Sketch -> Include Library -> Manage Libraries
    -Pesquise por ```PubSubClient``` e instale a biblioteca
 
-2.**Escrever código para o ESP32**:
-  -O ESP32 deverá ler os dados do LDR e do DHT22 e enviá-los ao servidor via MQTT
+2. **Escrever código para o ESP32**:
+   -O ESP32 deverá ler os dados do LDR e do DHT22 e enviá-los ao servidor via MQTT
 
-3.**Fazer Upload do Código para o ESP32**:
-  -Após ajustar os parâmetros de rede e servidor, faça o upload do código no ESP32 usando Arduino IDE ou PlatformIO.
+3. **Fazer Upload do Código para o ESP32**:
+   -Após ajustar os parâmetros de rede e servidor, faça o upload do código no ESP32 usando Arduino IDE ou PlatformIO.
 
 
 ### 3. Visualização de Dados no Servidor
 
-1.**Subscrição para Receber Dados:**:
+1. **Subscrição para Receber Dados:**:
   -No servidor Linux, utilize o seguinte comando para subscrever aos tópicos MQTT:
   ```mosquitto_sub -h localhost -t "sensor/temperatura"
   mosquitto_sub -h localhost -t "sensor/umidade"
-2.**Dashboard de Visualização (Sprint Final):**:
+2. **Dashboard de Visualização (Sprint Final):**:
   -Mais tarde, os dados serão integrados a um dashboard gráfico, acessível pela aba "Dados" no site da Sprint, utilizando bibliotecas como Chart.js ou D3.js para exibição visual.
