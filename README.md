@@ -81,12 +81,12 @@ No futuro, o projeto será expandido para integrar dados de telemetria relaciona
 
 ### 3. Visualização de Dados no Servidor
 
-1. **Subscrição para Receber Dados:**:
+1. **Subscrição para Receber Dados:**
   -No servidor Linux, utilize o seguinte comando para subscrever aos tópicos MQTT:
   ```
   mosquitto_sub -h localhost -t "sensor/temperatura"
   mosquitto_sub -h localhost -t "sensor/umidade"
   ```
 
-2. **Dashboard de Visualização (Sprint Final):**:
+2. **Dashboard de Visualização (Sprint Final):**
   -Mais tarde, os dados serão integrados a um dashboard gráfico, acessível pela aba "Dados" no site da Sprint, utilizando bibliotecas como Chart.js ou D3.js para exibição visual.
